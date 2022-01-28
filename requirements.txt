@@ -1,0 +1,13 @@
+deng==2019.11.22
+Faker==4.14.0
+Flask==1.1.1
+Flask_APScheduler==1.12.3
+Flask_Login==0.5.0
+Flask_SQLAlchemy==2.5.1
+PyMySQL==0.9.3
+redis==2.10.6
+requests==2.22.0
+requests_html==0.10.0
+SQLAlchemy==1.4.10
+urllib3==1.25.11
+Werkzeug==0.15.5
