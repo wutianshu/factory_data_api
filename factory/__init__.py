@@ -54,11 +54,8 @@ def create_app(env):
 
     logger.info('成功加载配置：{}'.format(config[env]))
 
-    # scheduler.init_app(app)
-    # scheduler.start()
-    # scheduler = APScheduler()
-    # scheduler.init_app(app)
-    # scheduler.start()
+    scheduler.init_app(app)
+    scheduler.start()
 
     # 数据库
     db.app = app

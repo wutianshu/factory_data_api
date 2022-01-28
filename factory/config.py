@@ -3,6 +3,7 @@
 
 import os
 import platform
+import datetime
 
 
 class Config(object):
@@ -49,38 +50,20 @@ class Config(object):
     # 定时任务
     JOBS = [
         {
-            'id': 'bugSyc',
-            'func': 'cstest:tools.views.bugSyc',
+            'id': 'task1',
+            'func': 'factory:task.task_demo.task1',
             'trigger': 'interval',
-            'seconds': 60 * 60 * 6
+            'seconds': 5  # 单位为秒
         },
         {
-            'id': 'task_bug_list',
-            'func': 'cstest:views._task_remind',
-            'args': ['bug_list'],
+            'id': 'task2',
+            'func': 'factory:task.task_demo.task2',
+            'args': [datetime.datetime.now()],
             'trigger': 'cron',  # 指定任务触发器 cron
             'day_of_week': '0-4',  # 每周1至周5晚上6点执行
             'hour': 18,
             'minute': 00
-        },
-        {
-            'id': 'task_todo_list',
-            'func': 'cstest:views._task_remind',
-            'args': ['todo_list'],
-            'trigger': 'cron',  # 指定任务触发器 cron
-            'day_of_week': '0-4',  # 每周1至周5早上9点执行
-            'hour': 9,
-            'minute': 00
-        },
-        {
-            'id': 'task_analyses_list',
-            'func': 'cstest:views._task_remind',
-            'args': ['analyses_list'],
-            'trigger': 'cron',  # 指定任务触发器 cron
-            'day_of_week': '0',  # 每周一10点运行
-            'hour': 10,
-            'minute': 00
-        },
+        }
     ]
     SCHEDULER_TIMEZONE = 'Asia/Shanghai'
     SCHEDULER_API_ENABLED = True
