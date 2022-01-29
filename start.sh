@@ -13,7 +13,7 @@ fi
 # find ${BASE_DIR} -type f -name *.pyc|xargs rm -f
 
 # 选择对应的虚拟环境
-# source ~/.bashrc
+source ~/.bashrc
 workon factory
 
 # 启动python web容器gunicorn
