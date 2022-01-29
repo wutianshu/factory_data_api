@@ -33,7 +33,7 @@ class Config(object):
     # DB用户名
     DB_USER = 'root'
     # DB密码
-    DB_PASS = 'root'
+    DB_PASS = '123456'
     # DB数据库
     DB_NAME = 'factory_data'
 
